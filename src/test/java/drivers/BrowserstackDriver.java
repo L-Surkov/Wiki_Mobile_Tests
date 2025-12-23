@@ -21,10 +21,15 @@ public class BrowserstackDriver implements WebDriverProvider {
 
         String browserstackUser = System.getProperty("browserstack.user");
         String browserstackKey = System.getProperty("browserstack.key");
+        if (browserstackUser == null || browserstackKey == null) {
+            throw new IllegalArgumentException(
+                    "JVM properties 'browserstack.user' and 'browserstack.key' must be set. " +
+                            "Use: -Dbrowserstack.user=YOUR_USER -Dbrowserstack.key=YOUR_KEY"
+            );
+        }
 
-
-        caps.setCapability("userName", browserstackUser);
-        caps.setCapability("accessKey", browserstackKey);
+        caps.setCapability("browserstack.user", browserstackUser);
+        caps.setCapability("browserstack.key", browserstackKey);
 
 
         caps.setCapability("project", config.project());

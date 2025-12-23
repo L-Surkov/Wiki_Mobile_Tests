@@ -9,6 +9,10 @@ public class Browserstack {
         String url = String.format("https://api.browserstack.com/app-automate/sessions/%s.json", sessionId);
         String user = System.getProperty("browserstack.user");
         String key = System.getProperty("browserstack.key");
+        if (user == null || key == null) {
+            System.err.println("Error: JVM properties 'browserstack.user' and 'browserstack.key' are not set");
+            return null;
+        }
 
         return given()
                 .auth().basic(user, key)

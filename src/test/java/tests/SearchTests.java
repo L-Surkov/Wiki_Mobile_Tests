@@ -13,7 +13,7 @@ public class SearchTests extends TestBase {
     @Tag("SearchTests")
     @Description("Проверка поисковой строки и вывода релевантного значения в поиске")
     void successfulSearchTest() {
-        searchPage = new SearchPage();  // Создаём после инициализации драйвера
+        searchPage = new SearchPage();
         String searchTerm = "Appium";
         searchPage.openSearch();
         searchPage.typeSearch(searchTerm);
