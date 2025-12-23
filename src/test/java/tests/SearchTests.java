@@ -1,22 +1,31 @@
 package tests;
 
 import org.junit.jupiter.api.Test;
-
-import static com.codeborne.selenide.CollectionCondition.sizeGreaterThan;
-import static com.codeborne.selenide.Selenide.*;
-import static io.appium.java_client.AppiumBy.*;
-import static io.qameta.allure.Allure.step;
+import pages.SearchPage;
+import config.ConfigReader;
+import config.TestConfig;
 
 public class SearchTests extends TestBase {
 
+    private SearchPage searchPage;
+
     @Test
     void successfulSearchTest() {
-        step("Type search", () -> {
-            $(accessibilityId("Search Wikipedia")).click();
-            $(id("org.wikipedia.alpha:id/search_src_text")).sendKeys("Appium");
-        });
-        step("Verify content found", () ->
-            $$(id("org.wikipedia.alpha:id/page_list_item_title"))
-                    .shouldHave(sizeGreaterThan(0)));
+        searchPage = new SearchPage();  // Создаём после инициализации драйвера
+        String searchTerm = "Appium";
+        searchPage.openSearch();
+        searchPage.typeSearch(searchTerm);
+        searchPage.verifyResultsArePresent();
+    }
+
+    @Test
+    void searchAndOpenArticle() {
+        searchPage = new SearchPage();  // Создаём после инициализации драйвера
+        String searchTerm = "RestApi";
+        String expectedTitle = "REST";
+        searchPage.openSearch();
+        searchPage.typeSearch(searchTerm);
+        searchPage.clickFirstResult();
+        searchPage.verifyTitleIs(expectedTitle);
     }
 }
