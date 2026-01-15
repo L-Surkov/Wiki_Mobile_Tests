@@ -5,15 +5,14 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import screens.SearchScreen;
 
+@Tag("SearchTests")
 public class SearchTests extends TestBase {
 
-    private SearchScreen searchScreen;
+    private final SearchScreen searchScreen = new SearchScreen();
 
     @Test
-    @Tag("SearchTests")
     @Description("Проверка поисковой строки и вывода релевантного значения в поиске")
     void successfulSearchTest() {
-        searchScreen = new SearchScreen();
         String searchTerm = "Appium";
         searchScreen.openSearch();
         searchScreen.typeSearch(searchTerm);
@@ -21,10 +20,8 @@ public class SearchTests extends TestBase {
     }
 
     @Test
-    @Tag("SearchTests")
     @Description("Проверка поисковой строки и открытия статьи при клике на результат")
     void searchAndOpenArticle() {
-        searchScreen = new SearchScreen();
         String searchTerm = "RestApi";
         String expectedTitle = "REST";
         searchScreen.openSearch();
