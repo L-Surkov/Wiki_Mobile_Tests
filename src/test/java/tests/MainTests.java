@@ -1,5 +1,9 @@
 package tests;
 
+import io.qameta.allure.Owner;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
+import io.qameta.allure.Story;
 import jdk.jfr.Description;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -22,6 +26,9 @@ public class MainTests extends TestBase {
     @Test
     @Description("Проверка поисковой строки и вывода релевантного значения в поиске")
     @DisplayName("Тестирование поиска")
+    @Story("Основные функции приложения")
+    @Severity(SeverityLevel.CRITICAL)
+    @Owner("allure8")
     void successfulSearchTest() {
         String searchTerm = "Appium";
         searchScreen.openSearch();
@@ -32,6 +39,9 @@ public class MainTests extends TestBase {
     @Test
     @Description("Проверка поисковой строки и открытия статьи при клике на результат - негативный")
     @DisplayName("Тестирование поиска - негативный сценарий")
+    @Story("Основные функции приложения")
+    @Severity(SeverityLevel.CRITICAL)
+    @Owner("allure8")
     void searchAndOpenArticleNegative() {
         String searchTerm = "RestApi";
         String expectedTitle = "REST";
@@ -44,6 +54,9 @@ public class MainTests extends TestBase {
     @Test
     @Description("Проверка отображения заголовка In the News на главном экране приложения")
     @DisplayName("Тестирование наличия заголовка на главном экране")
+    @Story("Основные функции приложения")
+    @Severity(SeverityLevel.CRITICAL)
+    @Owner("allure8")
     void inTheNewsSectionTest() {
         mainScreen.checkInTheNews("In the News");
     }
@@ -51,6 +64,9 @@ public class MainTests extends TestBase {
     @Test
     @Description("Проверка невозможности входа в личный кабинет после ввода некорректных данных")
     @DisplayName("Тестирование авторизации - негативный сценарий")
+    @Story("Основные функции приложения")
+    @Severity(SeverityLevel.CRITICAL)
+    @Owner("allure8")
     void unsuccessfulLoginTest() {
         gettingStartedScreen.skipButtonClick();
         mainScreen.moreClick();
@@ -66,6 +82,9 @@ public class MainTests extends TestBase {
     @Test
     @Description("Проверка возможности смены языка в настройках приложения")
     @DisplayName("Тестирование смены языка текста в настройках")
+    @Story("Основные функции приложения")
+    @Severity(SeverityLevel.CRITICAL)
+    @Owner("allure8")
     void languageSettingTest() {
         mainScreen.navigationPress()
                 .settingsButtonClick();

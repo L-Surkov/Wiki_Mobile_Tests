@@ -53,9 +53,9 @@ tasks.withType(Test) {
 }
 
 // Отдельные задачи для разных тегов
-tasks.register('mobile_search_tests', Test) {
+tasks.register('mobile_main_tests', Test) {
     useJUnitPlatform {
-        includeTags("SearchTests")
+        includeTags("MainTests")
     }
 }
 
