@@ -44,8 +44,8 @@ public class MainScreen {
         return this;
     }
 
-    @Step ("Нажать на кнопку 'Навигация'")
-    public MainScreen navigationPress(){
+    @Step("Нажать на кнопку 'Навигация'")
+    public MainScreen navigationPress() {
         navigationButton.click();
         return this;
     }

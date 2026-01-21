@@ -1,4 +1,5 @@
 package screens;
+
 import com.codeborne.selenide.ElementsCollection;
 import io.appium.java_client.AppiumBy;
 import io.qameta.allure.Step;

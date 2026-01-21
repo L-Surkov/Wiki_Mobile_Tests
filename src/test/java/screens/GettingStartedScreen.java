@@ -9,9 +9,9 @@ import static io.appium.java_client.AppiumBy.id;
 public class GettingStartedScreen {
 
     private final SelenideElement screenPrimaryText = $(id("org.wikipedia:id/primaryTextView")),
-    forwardButton = $(id("org.wikipedia:id/fragment_onboarding_forward_button")),
-    doneButton = $(id("org.wikipedia:id/fragment_onboarding_done_button")),
-    skipButton = $(id("org.wikipedia.alpha:id/fragment_onboarding_skip_button"));
+            forwardButton = $(id("org.wikipedia:id/fragment_onboarding_forward_button")),
+            doneButton = $(id("org.wikipedia:id/fragment_onboarding_done_button")),
+            skipButton = $(id("org.wikipedia.alpha:id/fragment_onboarding_skip_button"));
 
     @Step("Заголовок соответствует макетам")
     public GettingStartedScreen primaryTextMatch(String header) {

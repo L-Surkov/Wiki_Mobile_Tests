@@ -36,6 +36,7 @@ public class TestBase {
         Selenide.closeWebDriver();
         Attach.addVideo(sessionId);
     }
+
     static WebDriverProvider chooseMode() {
         String testDeviceDriver = System.getProperty("DdeviceHost", "emulation");
 

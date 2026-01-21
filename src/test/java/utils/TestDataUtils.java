@@ -10,6 +10,7 @@ public class TestDataUtils {
         return faker.name().fullName();
 
     }
+
     private String getPassword() {
         return faker.lordOfTheRings().location();
     }

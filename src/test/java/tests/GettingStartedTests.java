@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import screens.GettingStartedScreen;
 
-public class GettingStartedTests extends TestBase{
+public class GettingStartedTests extends TestBase {
 
     GettingStartedScreen getStarted = new GettingStartedScreen();
     String firstScreenHeader = "The Free Encyclopedia\n…in over 300 languages";
