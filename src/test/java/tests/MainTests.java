@@ -62,4 +62,16 @@ public class MainTests extends TestBase {
                 .checkErrorText("Incorrect username or password entered.");
 
     }
+
+    @Test
+    @Description("Проверка возможности смены языка в настройках приложения")
+    @DisplayName("Тестирование смены языка текста в настройках")
+    void languageSettingTest() {
+        mainScreen.navigationPress()
+                .settingsButtonClick();
+        settingScreen.languageListClick();
+        languageScreen.languageSelection("Русский")
+                .checkLanguage("Русский");
+
+    }
 }
