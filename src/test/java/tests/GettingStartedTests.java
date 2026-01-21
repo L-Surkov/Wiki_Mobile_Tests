@@ -5,6 +5,7 @@ import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Story;
 import jdk.jfr.Description;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import screens.GettingStartedScreen;
@@ -20,6 +21,7 @@ public class GettingStartedTests extends TestBase{
     @Test
     @Tag("GettingStartedTests")
     @Description("Проверка корректного отображения экрана онбординга и заголовков")
+    @DisplayName("Проверка корректного отображения экрана онбординга и заголовков")
     @Story("Онбординг")
     @Severity(SeverityLevel.CRITICAL)
     @Owner("allure8")
