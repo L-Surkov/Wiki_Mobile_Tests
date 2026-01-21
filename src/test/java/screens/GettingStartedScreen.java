@@ -8,9 +8,10 @@ import static io.appium.java_client.AppiumBy.id;
 
 public class GettingStartedScreen {
 
-    private final SelenideElement screenPrimaryText = $(id("org.wikipedia:id/primaryTextView"));
-    private final SelenideElement forwardButton = $(id("org.wikipedia:id/fragment_onboarding_forward_button"));
-    private final SelenideElement doneButton = $(id("org.wikipedia:id/fragment_onboarding_done_button"));
+    private final SelenideElement screenPrimaryText = $(id("org.wikipedia:id/primaryTextView")),
+    forwardButton = $(id("org.wikipedia:id/fragment_onboarding_forward_button")),
+    doneButton = $(id("org.wikipedia:id/fragment_onboarding_done_button")),
+    skipButton = $(id("org.wikipedia.alpha:id/fragment_onboarding_skip_button"));
 
     @Step("Заголовок соответствует макетам")
     public GettingStartedScreen primaryTextMatch(String header) {
@@ -25,7 +26,14 @@ public class GettingStartedScreen {
     }
 
     @Step("Закончить онбординг")
-    public void tapDoneButton() {
+    public GettingStartedScreen tapDoneButton() {
         doneButton.click();
+        return this;
+    }
+
+    @Step("Пропустить страницы приветствия")
+    public GettingStartedScreen skipButtonClick() {
+        skipButton.click();
+        return this;
     }
 }

@@ -1,8 +1,10 @@
 package screens;
 
 import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
 
+import static com.codeborne.selenide.Condition.exist;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$$;
@@ -15,6 +17,7 @@ public class SearchScreen {
     private final String searchButton = "Search Wikipedia";
     private final String searchInputId = "org.wikipedia.alpha:id/search_src_text";
     private final String resultItemId = "org.wikipedia.alpha:id/page_list_item_title";
+    private final SelenideElement errorTable = $(id("org.wikipedia.alpha:id/view_wiki_error_icon"));
 
     @Step("Открыть поиск")
     public void openSearch() {
@@ -44,5 +47,13 @@ public class SearchScreen {
         $(byText(expectedTitle))
                 .shouldBe(Condition.visible)
                 .shouldHave(Condition.exactText(expectedTitle));
+    }
+
+
+    @Step("Проверить отображение иконки ошибки")
+    public SearchScreen checkErrorIcon() {
+        errorTable.should(exist);
+        return this;
+
     }
 }
