@@ -1,5 +1,5 @@
 ﻿
-# Проект по автоматизации тестирования мобильного приложения Wikipedia [Wikipedia](https://play.google.com/store/apps/details?id=org.wikipedia&hl=ru)
+# Проект по автоматизации тестирования мобильного приложения [Wikipedia](https://play.google.com/store/apps/details?id=org.wikipedia&hl=ru)
 
 > Wikipedia App — энциклопедический сервис, разработанный фондом Викимедиа, является официальным приложением интернет-энциклопедии Википедия для мобильных интернет-устройств.
 > 
