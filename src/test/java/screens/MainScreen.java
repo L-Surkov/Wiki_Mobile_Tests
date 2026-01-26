@@ -3,7 +3,11 @@ package screens;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
+import com.codeborne.selenide.WebDriverRunner;
+import com.google.common.collect.ImmutableMap;
 import io.qameta.allure.Step;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.remote.RemoteWebElement;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
@@ -28,7 +32,10 @@ public class MainScreen {
 
     @Step("Нажать на кнопку 'More'")
     public MainScreen moreClick() {
-        moreButton.click();
+        ((JavascriptExecutor) WebDriverRunner.getWebDriver())
+                .executeScript("mobile: click", ImmutableMap.of(
+                        "elementId", ((RemoteWebElement) moreButton.toWebElement()).getId()
+                ));
         return this;
     }
 
