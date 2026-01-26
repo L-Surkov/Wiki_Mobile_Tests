@@ -56,14 +56,14 @@ ____
 ## <img alt="Jenkins" height="25" src="images/logo/Jenkins.svg" width="25"/></a><a name="Сборка"></a>Сборка в [Jenkins](https://jenkins.autotests.cloud/job/038-L_Surkov-JenkinsWiki_Mobile_Tests/)</a>
 ____
 <p align="center">  
-<a href="https://jenkins.autotests.cloud/job/038-L_Surkov-JenkinsQAGuru_API_Tests/"><img src="images/screen/jenkins_build.png" alt="Jenkins" width="950"/></a>  
+<a href="https://jenkins.autotests.cloud/job/038-L_Surkov-JenkinsWiki_Mobile_Tests/"><img src="images/screen/jenkins_build.png" alt="Jenkins" width="950"/></a>  
 </p>
 
 
 ### **Параметры сборки в Jenkins:**
 
 - *ENVIRONMENT (тестовая среда, по умолчанию Test)*
-- *PROP (конфигурация для запуска на Android)*
+- *PROP (конфигурация для запуска удалённо/на эмуляторе)*
 - *BROWSERSTACK_USER (User_id из аккаунта BrowserStack)*
 - *BROWSERSTACK_KEY (токен из аккаунта BrowserStack)*
 
@@ -72,22 +72,24 @@ ____
 ___
 ***Локальный запуск:***
 ```bash  
-gradle clean mobile_getting_started_tests mobile_main_tests
+gradle clean mobile_main_tests 
 -Dprop=${PROP}
 -Dbrowserstack.user=${BROWSERSTACK_USER}
 -Dbrowserstack.key=${BROWSERSTACK_KEY}
+*Может быть использовано задание mobile_getting_started_tests для запуска тестов на экран онбординга
 ```
 
 ***Удалённый запуск через Jenkins:***
 ```bash  
-clean mobile_getting_started_tests mobile_main_tests
+clean mobile_main_tests
 -Dprop=${PROP}
 -Dbrowserstack.user=${BROWSERSTACK_USER}
 -Dbrowserstack.key=${BROWSERSTACK_KEY}
+*Может быть использовано задание mobile_getting_started_tests для запуска тестов на экран онбординга
 ```
 ___
 <a id="allure"></a>
-## <img alt="Allure" height="25" src="images/logo/Allure.svg" width="25"/></a> <a name="Allure"></a>Allure [отчет](https://jenkins.autotests.cloud/job/Kod3ik_qa_guru_x5/allure/)</a>
+## <img alt="Allure" height="25" src="images/logo/Allure.svg" width="25"/></a> <a name="Allure"></a>Allure [отчет](https://jenkins.autotests.cloud/job/038-L_Surkov-JenkinsWiki_Mobile_Tests/allure/)</a>
 ___
 
 ### *Основная страница отчёта*
@@ -106,8 +108,6 @@ ___
 
   <p align="center">  
 <img title="Allure Graphics" src="images/screen/allure_graths.png" width="850">
-
-<img title="Allure Graphics" src="images/screen/graphs.png" width="850">  
 </p>
 
 ____
@@ -120,9 +120,9 @@ ____
 
 ____
 <a id="video"></a>
-## <img alt="Selenoid" height="25" src="images/logo/Selenoid.svg" width="25"/></a> Примеры видео выполнения тестов на Selenoid
+## <img alt="Selenoid" height="25" src="images/logo/Selenoid.svg" width="25"/></a> Пример видео выполнения одного из тестов на BrowserStack
 ____
 <p align="center">
-<img title="Selenoid Video" src="images/video/mkb.gif" width="550" height="350"  alt="video">   
+<img title="Selenoid Video" src="images/video/wiki_video.gif" width="150" height="450"  alt="video">   
 </p>
 
