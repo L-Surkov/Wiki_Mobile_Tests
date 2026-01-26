@@ -68,7 +68,7 @@ public class MainTests extends TestBase {
     @Severity(SeverityLevel.CRITICAL)
     @Owner("allure8")
     void unsuccessfulLoginTest() {
-        gettingStartedScreen.skipButtonClick();
+        //gettingStartedScreen.skipButtonClick();
         mainScreen.moreClick();
         mainScreen.loginClick();
         createAccountScreen.authLoginClick();
@@ -89,8 +89,8 @@ public class MainTests extends TestBase {
         mainScreen.navigationPress()
                 .settingsButtonClick();
         settingScreen.languageListClick();
-        languageScreen.languageSelection("Русский")
-                .checkLanguage("Русский");
+        languageScreen.languageSelection("Deutsch")
+                .checkLanguage("Deutsch");
 
     }
 }
