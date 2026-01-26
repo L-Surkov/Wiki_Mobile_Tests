@@ -53,7 +53,7 @@ ____
 - ✓ *Проверка изменения оформления текста через настройку Theme*
 ____
 <a id="jenkins"></a>
-## <img alt="Jenkins" height="25" src="images/logo/Jenkins.svg" width="25"/></a><a name="Сборка"></a>Сборка в [Jenkins](https://jenkins.autotests.cloud/job/038-L_Surkov-JenkinsQAGuru_API_Tests/)</a>
+## <img alt="Jenkins" height="25" src="images/logo/Jenkins.svg" width="25"/></a><a name="Сборка"></a>Сборка в [Jenkins](https://jenkins.autotests.cloud/job/038-L_Surkov-JenkinsWiki_Mobile_Tests/)</a>
 ____
 <p align="center">  
 <a href="https://jenkins.autotests.cloud/job/038-L_Surkov-JenkinsQAGuru_API_Tests/"><img src="images/screen/jenkins_build.png" alt="Jenkins" width="950"/></a>  
@@ -63,18 +63,27 @@ ____
 ### **Параметры сборки в Jenkins:**
 
 - *ENVIRONMENT (тестовая среда, по умолчанию Test)*
+- *PROP (конфигурация для запуска на Android)*
+- *BROWSERSTACK_USER (User_id из аккаунта BrowserStack)*
+- *BROWSERSTACK_KEY (токен из аккаунта BrowserStack)*
 
 <a id="console"></a>
 ## Команды для запуска из терминала
 ___
 ***Локальный запуск:***
 ```bash  
-gradle clean executeApiTests
+gradle clean mobile_test
+-Dprop=${PROP}
+-Dbrowserstack.user=${BROWSERSTACK_USER}
+-Dbrowserstack.key=${BROWSERSTACK_KEY}
 ```
 
 ***Удалённый запуск через Jenkins:***
 ```bash  
-clean executeApiTests
+clean mobile_test
+-Dprop=${PROP}
+-Dbrowserstack.user=${BROWSERSTACK_USER}
+-Dbrowserstack.key=${BROWSERSTACK_KEY}
 ```
 ___
 <a id="allure"></a>
