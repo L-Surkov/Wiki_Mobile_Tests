@@ -23,6 +23,7 @@ public class TestBase {
 
     @BeforeEach
     void beforeEach() {
+        Configuration.pageLoadTimeout = 0;
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
         Selenide.open();
     }
@@ -38,7 +39,7 @@ public class TestBase {
     }
 
     static WebDriverProvider chooseMode() {
-        String testDeviceDriver = System.getProperty("DdeviceHost", "emulation");
+        String testDeviceDriver = System.getProperty("deviceHost", "emulation");
 
         return switch (testDeviceDriver) {
             case "browserstack" -> new BrowserstackDriver();

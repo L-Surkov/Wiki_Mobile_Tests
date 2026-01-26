@@ -7,11 +7,6 @@ import org.aeonbits.owner.Config;
         "classpath:remote.properties"
 })
 public interface RemoteConfig extends Config {
-    @Key("browserstack.user")
-    String browserstackUser();
-
-    @Key("browserstack.key")
-    String browserstackKey();
 
     @Key("app")
     String app();
