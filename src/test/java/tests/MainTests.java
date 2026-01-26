@@ -71,7 +71,6 @@ public class MainTests extends TestBase {
         //gettingStartedScreen.skipButtonClick();
         mainScreen.moreClick();
         mainScreen.loginClick();
-        createAccountScreen.authLoginClick();
         loginScreen.usernameInput(testDataUtils.username)
                 .passwordInput(testDataUtils.password)
                 .loginButtonClick()
