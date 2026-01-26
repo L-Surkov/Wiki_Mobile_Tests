@@ -111,6 +111,16 @@ ___
 </p>
 
 ____
+
+<a id="allure-testops"></a>
+## <img alt="TestOps" height="25" src="images/logo/TestOps_logo_2.png" width="25"/></a> <a name="TestOps"></a>Интеграция с Allure TestOps [проект](https://allure.autotests.cloud/launch/50972/tree?search=W3siaWQiOiJzdGF0dXMiLCJ0eXBlIjoidGVzdFN0YXR1c0FycmF5IiwidmFsdWUiOlsicGFzc2VkIl19XQ%3D%3D&treeId=0)</a>
+___
+<p align="center">  
+<img title="Allure TestOps Overview Dashboard" src="images/screen/TestOps.png" width="850">  
+</p>
+
+____
+
 <a id="telegram"></a>
 ## <img alt="Allure" height="25" src="images/logo/Telegram.svg" width="25"/></a> Уведомление в Telegram при помощи бота
 ____
