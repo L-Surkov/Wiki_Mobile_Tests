@@ -72,7 +72,7 @@ ____
 ___
 ***Локальный запуск:***
 ```bash  
-gradle clean mobile_test
+gradle clean mobile_getting_started_tests mobile_main_tests
 -Dprop=${PROP}
 -Dbrowserstack.user=${BROWSERSTACK_USER}
 -Dbrowserstack.key=${BROWSERSTACK_KEY}
@@ -80,7 +80,7 @@ gradle clean mobile_test
 
 ***Удалённый запуск через Jenkins:***
 ```bash  
-clean mobile_test
+clean mobile_getting_started_tests mobile_main_tests
 -Dprop=${PROP}
 -Dbrowserstack.user=${BROWSERSTACK_USER}
 -Dbrowserstack.key=${BROWSERSTACK_KEY}
