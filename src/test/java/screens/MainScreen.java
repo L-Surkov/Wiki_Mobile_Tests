@@ -15,7 +15,7 @@ public class MainScreen {
 
     private final SelenideElement searchWikipedia = $(accessibilityId("Search Wikipedia")),
             moreButton = $(id("org.wikipedia.alpha:id/menu_overflow_button")),
-            loginButton = $(id("org.wikipedia.alpha:id/main_drawer_login_button")),
+            loginButton = $(id("org.wikipedia.alpha:id/explore_overflow_account_container")),
             navigationButton = $(id("org.wikipedia.alpha:id/menu_overflow_button")),
             settingButton = $(id("org.wikipedia.alpha:id/explore_overflow_settings"));
     private final ElementsCollection card = $$(id("org.wikipedia.alpha:id/view_card_header_title"));
@@ -32,7 +32,7 @@ public class MainScreen {
         return this;
     }
 
-    @Step("Нажать на кнопку 'Log in/ join Wikipedia'")
+    @Step("Нажать на кнопку 'Log in to Wikipedia'")
     public MainScreen loginClick() {
         loginButton.click();
         return this;
