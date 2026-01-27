@@ -30,6 +30,7 @@ public class MainTests extends TestBase {
     @Severity(SeverityLevel.CRITICAL)
     @Owner("allure8")
     void successfulSearchTest() {
+        //gettingStartedScreen.skipButtonClick();
         String searchTerm = "Appium";
         searchScreen.openSearch();
         searchScreen.typeSearch(searchTerm);
@@ -43,6 +44,7 @@ public class MainTests extends TestBase {
     @Severity(SeverityLevel.CRITICAL)
     @Owner("allure8")
     void searchAndOpenArticleNegative() {
+        //gettingStartedScreen.skipButtonClick();
         String searchTerm = "RestApi";
         String expectedTitle = "REST";
         searchScreen.openSearch();
@@ -58,6 +60,7 @@ public class MainTests extends TestBase {
     @Severity(SeverityLevel.CRITICAL)
     @Owner("allure8")
     void inTheNewsSectionTest() {
+        //gettingStartedScreen.skipButtonClick();
         mainScreen.checkInTheNews("In the News");
     }
 
@@ -85,6 +88,7 @@ public class MainTests extends TestBase {
     @Severity(SeverityLevel.CRITICAL)
     @Owner("allure8")
     void languageSettingTest() {
+        //gettingStartedScreen.skipButtonClick();
         mainScreen.navigationPress()
                 .settingsButtonClick();
         settingScreen.languageListClick();

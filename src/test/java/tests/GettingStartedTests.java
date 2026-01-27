@@ -16,7 +16,7 @@ public class GettingStartedTests extends TestBase {
     String firstScreenHeader = "The Free Encyclopedia\n…in over 300 languages";
     String secondScreenHeader = "New ways to explore";
     String thirdScreenHeader = "Reading lists with sync";
-    String fourthScreenHeader = "Send anonymous data";
+    String fourthScreenHeader = "Data";
 
     @Test
     @Tag("GettingStartedTests")
