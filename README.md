@@ -133,6 +133,6 @@ ____
 ## <img alt="Selenoid" height="25" src="images/logo/Selenoid.svg" width="25"/></a> Пример видео выполнения одного из тестов на BrowserStack
 ____
 <p align="center">
-<img title="Selenoid Video" src="images/video/wiki_video.gif" width="150" height="450"  alt="video">   
+<img title="Selenoid Video" src="images/video/wiki-video.gif" width="250" height="550"  alt="video">   
 </p>
 
